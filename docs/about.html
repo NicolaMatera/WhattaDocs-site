@@ -14,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-  <link rel="stylesheet" crossorigin href="/git-tutorial/assets/style-y8HTTuiw.css">
+  <link rel="stylesheet" crossorigin href="/git-tutorial/assets/style-BYTM5qkf.css">
 </head>
 
 <body>
@@ -22,9 +22,8 @@
     <div class="drawer">
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col">
-            <!-- Navbar -->
             <div class="navbar bg-[#fafafa] w-full">
-                <div class="flex-none lg:hidden">
+                <div class="flex-none md:hidden">
                     <label for="my-drawer-2" aria-label="open sidebar" class="btn btn-square btn-ghost">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             class="inline-block h-6 w-6 stroke-current">
@@ -33,78 +32,172 @@
                         </svg>
                     </label>
                 </div>
-                <div class="mx-2 flex-1 px-2"><a href="home.html">Navbar Title</a></div>
-                <div class="hidden flex-none lg:block">
+
+                <div class="mx-2 flex-1 px-2">
+                    <a href="home.html"
+                        class="inline-flex items-center gap-2 btn btn-ghost normal-case text-xl hover:bg-transparent p-0"
+                        aria-label="WhattaDoc Home">
+
+                        <img src="data:image/svg+xml,%3csvg%20width='459'%20height='482'%20viewBox='0%200%20459%20482'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M229.982%200L107.282%20262.102H160.602L229.982%20108.246L299.362%20262.102H352.361L229.982%200Z'%20fill='%23DEBB5D'/%3e%3cpath%20d='M0%20481.484L94.7551%20282.017H204.607V236.406H254.072V282.017H363.924L459%20481.484H352.682V437.158H382.554L330.519%20326.985H254.714V481.484H204.286L204.607%20326.985H128.481L76.4465%20436.837H106.318V481.484H0Z'%20fill='%23AA977B'/%3e%3c/svg%3e" alt="Logo WhattaDoc" class="w-8 h-8 object-contain" />
+                        <span class="text-lg">WhattaDoc</span>
+
+                    </a>
+                </div>
+
+                <div class="hidden flex-none md:block">
                     <ul class="menu menu-horizontal">
-                        <!-- Navbar menu content here -->
-                        <li><a class="text-base" href="download.html">Start</a></li>
+                        <li><a class="text-base" href="start.html">Start</a></li>
                         <li><a class="text-base" href="about.html">About</a></li>
-                        <li><a class="text-base" href="about.html">Help center</a></li>
+                        <li><a class="text-base" href="resources.html">Resources</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="drawer-side">
             <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
-            <ul class="menu bg-base-200 min-h-full w-full p-4">
-                <!-- Sidebar content here -->
+            <div class="menu bg-base-200 text-base-content min-h-full w-full p-4">
                 <div class="flex justify-end">
-                    <label for="my-drawer-2" class="btn btn-ghost btn-circle">✕</label>
+                    <label for="my-drawer-2" aria-label="chiudi menu" class="btn btn-ghost btn-circle">✕</label>
                 </div>
-                <li class="mt-auto"><a href="download.html"
-                        class=" justify-center font-plus-custom text-xl mt-4">Download</a></li>
-                <li class=""><a class="justify-center font-plus-custom text-xl mt-8">About</a></li>
-                <li class="mb-auto"><a class="justify-center font-plus-custom text-xl mt-8">Help center</a></li>
-            </ul>
+                <ul class="flex-1 flex flex-col justify-center space-y-4">
+                    <li>
+                        <a href="start.html" class="justify-center font-plus-custom text-xl py-3">Start</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="justify-center font-plus-custom text-xl py-3">About</a>
+                    </li>
+                    <li>
+                        <a href="resources.html" class="justify-center font-plus-custom text-xl py-3">Resources</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div class="mt-12 px-12 sm:px-20 md:px-0 md:max-w-lg md:mx-auto lg:max-w-2xl">
-        <img class="mx-auto w-[15%]" src="data:image/svg+xml,%3csvg%20width='36'%20height='36'%20viewBox='0%200%2036%2036'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M33.4286%200H2.56339C1.14911%200%200%201.16518%200%202.59554V33.4045C0%2034.8348%201.14911%2036%202.56339%2036H33.4286C34.8429%2036%2036%2034.8348%2036%2033.4045V2.59554C36%201.16518%2034.8429%200%2033.4286%200ZM10.8804%2030.8571H5.54464V13.6768H10.8884V30.8571H10.8804ZM8.2125%2011.3304C6.50089%2011.3304%205.11875%209.94018%205.11875%208.23661C5.11875%206.53304%206.50089%205.14286%208.2125%205.14286C9.91607%205.14286%2011.3062%206.53304%2011.3062%208.23661C11.3062%209.94821%209.92411%2011.3304%208.2125%2011.3304ZM30.8812%2030.8571H25.5455V22.5C25.5455%2020.5071%2025.5054%2017.9438%2022.7732%2017.9438C19.9929%2017.9438%2019.567%2020.1134%2019.567%2022.3554V30.8571H14.2313V13.6768H19.35V16.0232H19.4223C20.1375%2014.6732%2021.8813%2013.2509%2024.4768%2013.2509C29.8768%2013.2509%2030.8812%2016.8107%2030.8812%2021.4393V30.8571Z'%20fill='%232867B2'/%3e%3c/svg%3e" alt="">
+        <img class="mx-auto w-[15%]" src="/git-tutorial/assets/logo-d1gadJvt.png" alt="Logo WhattaData">
 
         <div class="flex justify-center w-full mt-16">
             <span
-                class="text-sm xl:text-base inline-flex items-center justify-center rounded-lg bg-[#FDFBF7] px-4 py-1.5 text-base text-[#D97706]/80 font-inter-custom">
+                class="text-base text-[#754306] font-inter-custom items-center justify-center rounded-lg bg-[#FDFBF7] px-4 py-1.5">
                 Our mission
             </span>
         </div>
 
         <h1 class="font-inter-custom font-thin text-center text-balance text-4xl mt-4 lg:text-5xl">
-            Lorem ipsum dolor sit amet, consectetur
+            From Data to Decision
         </h1>
 
         <p class="text-[#3d3d3d] font-urbanist-custom py-8 text-center text-lg md:text-balance">
-            Nunc arcu mauris, varius id turpis eu, mollis aliquet enim.
-            Sed condimentum, odio at iaculis sollicitudin, purus erat pellentesque ex, non cursus turpis felis sed arcu.
-            Etiam maximus molestie risus.
-        </p>
+            Whattadata is a spin-off of the University of Milan-Bicocca that transforms data management and analysis
+            into concrete solutions for decision-making, processes, and services</p>
     </div>
 
-    <div class="mt-12 px-8 sm:px-16 md: flex flex-col md:max-w-xl md:mx-auto md:p-0 lg:max-w-3xl">
-        <h2 class="font-plus-custom font-bold text-balance text-3xl mt-4">Our Team
+    <div class="mt-12 px-8 sm:px-16 flex flex-col md:max-w-xl md:mx-auto md:p-0 lg:max-w-3xl">
+        <h2 class="font-plus-custom font-bold text-balance text-3xl mt-4 lg:max-w-sm">Our Team
         </h2>
-        <div class="grid grid-cols-2 gap-2 mt-8 md:w-full lg:max-w-lg lgmx-auto">
+        <div class="grid grid-cols-2 gap-2 mt-8 md:w-full lg:max-w-lg">
             <div>
-                <img class="rounded-md object-cover" src="/git-tutorial/assets/team%20image-DvNdqL1f.jpg" alt="">
-                <img class="mt-2 rounded-md object-cover" src="/git-tutorial/assets/team%20image-DvNdqL1f.jpg" alt="">
+                <img class="rounded-md object-cover" src="/git-tutorial/assets/team-image-DvNdqL1f.jpg"
+                    alt="Foto del team WhattaData">
+                <img class="mt-2 rounded-md object-cover" src="/git-tutorial/assets/team-image-DvNdqL1f.jpg"
+                    alt="Foto del team WhattaData">
             </div>
-            <img class="h-full rounded-md object-cover" src="/git-tutorial/assets/team%20image-DvNdqL1f.jpg" alt="">
+            <img class="h-full rounded-md object-cover" src="/git-tutorial/assets/team-image-DvNdqL1f.jpg"
+                alt="Foto del team WhattaData">
         </div>
-        <p class="font-urbanist-custom mt-8 pr-4 md:pr-0"> Nunc arcu mauris, varius id turpis eu, mollis aliquet enim.
-            Sed condimentum, odio at iaculis sollicitudin, purus erat pellentesque ex, non cursus turpis felis sed arcu.
-            Etiam maximus molestie risus.
+        <p class="font-urbanist-custom mt-8 pr-4 md:pr-0"> Whattadata was founded by the University of Milan-Bicocca to
+            bring innovation to data management and analysis. We develop practical solutions that optimize
+            decision-making processes and strategic services.
         </p>
 
-        <p class="font-urbanist-custom mt-8 pr-4 md:pr-0"> Nunc arcu mauris, varius id turpis eu, mollis aliquet enim.
-            Sed condimentum, odio at iaculis sollicitudin, purus erat pellentesque ex, non cursus turpis felis sed arcu.
-            Etiam maximus molestie risus.
+        <p class="font-urbanist-custom mt-8 pr-4 md:pr-0">Whattadata bridges the gap between science and business.
+            We leverage a company's information assets by developing customized solutions to simplify the management of
+            day-to-day processes.
         </p>
     </div>
 
-    <div class="bg-gradient-to-b to-transparent from-[#EBE3D7]/30 relative mt-20 pt-12 py-20 bg-base-200 px-4 md:px-0">
+    <div
+        class="relative px-8 sm:px-16 aspect-[5/3] sm:aspect-[4/2] md:px-0 md:aspect-[6/4] md:max-w-xl lg:aspect-[5/3] flex justify-center mt-20 lg:max-w-xl md:mx-auto">
+
+        <div id="team-carousel" class="carousel rounded-box w-full scroll-smooth">
+            <div class="carousel-item w-1/2">
+                <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
+                    class="w-full object-cover" alt="Primo membro team WhattaData" />
+            </div>
+            <div class="carousel-item w-1/2">
+                <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
+                    class="w-full object-cover" alt="Secondo membro team WhattaData" />
+            </div>
+            <div class="carousel-item w-1/2">
+                <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
+                    class="w-full object-cover" alt="Terzo membro team WhattaData" />
+            </div>
+            <div class="carousel-item w-1/2">
+                <img src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
+                    class="w-full object-cover" alt="Quarto membro team WhattaData" />
+            </div>
+            <div class="carousel-item w-1/2">
+                <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
+                    class="w-full object-cover" alt="Quinto membro team WhattaData" />
+            </div>
+            <div class="carousel-item w-1/2">
+                <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
+                    class="w-full object-cover" alt="Sesto membro team WhattaData" />
+            </div>
+            <div class="carousel-item w-1/2">
+                <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
+                    class="w-full object-cover" alt="Settimo membro team WhattaData" />
+            </div>
+        </div>
+
+        <div
+            class="absolute -left-5 -right-5 top-1/2 -translate-y-1/2 justify-between hidden lg:flex pointer-events-none z-10">
+            <button
+                onclick="document.getElementById('team-carousel').scrollBy({ left: -document.getElementById('team-carousel').clientWidth, behavior: 'smooth' })"
+                class="btn btn-circle btn-sm opacity-80 hover:opacity-100 pointer-events-auto">❮</button>
+            <button
+                onclick="document.getElementById('team-carousel').scrollBy({ left: document.getElementById('team-carousel').clientWidth, behavior: 'smooth' })"
+                class="btn btn-circle btn-sm opacity-80 hover:opacity-100 pointer-events-auto">❯</button>
+        </div>
+    </div>
+
+    <div class="flex flex-col mx-auto mt-12 max-w-md md:max-w-lg md:p-0 lg:max-w-3xl">
+        <h2 class="font-plus-custom font-bold text-balance text-3xl mt-4 lg:max-w-sm">Our Product
+        </h2>
+        <div class="flex flex-col lg:flex-row lg:gap-8">
+            <div class="mt-8 card w-full">
+                <figure>
+                    <img src="/git-tutorial/assets/immagine-prodotti-DdFCqAwz.webp" alt="Immagine computer aperto su Arianne" />
+                </figure>
+                <div class="card-body bg-[#EBE3D7]/30">
+                    <h3 class="card-title">Arianne</h3>
+                    <p class="font-urbanist-custom text-base">Digital platform for psychologists, psychotherapists, and psychiatrists</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Go now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 card w-full">
+                <figure>
+                    <img src="/git-tutorial/assets/immagine-prodotti-DdFCqAwz.webp" alt="Immagine computer aperto su WhattaDoc" />
+                </figure>
+                <div class="card-body bg-[#EBE3D7]/30">
+                    <h3 class="card-title">WhattaDoc</h3>
+                    <p class="font-urbanist-custom text-base">Conversational agent for querying corporate documents and private sources</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Go now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-b to-transparent from-[#EBE3D7]/30 relative mt-20 pt-12 py-20 px-4 md:px-0">
 
         <div class=" md:max-w-lg md:mx-auto ">
-            <h2 class="font-inter-custom font-thin text-center text-balance text-4xl">Get in touch
+            <h2 class="font-inter-custom font-thin text-center text-balance text-3xl">Get in touch
             </h2>
             <p class="font-urbanist-custom py-8 px-16 sm:px-20 md:px-12 text-sm text-center text-pretty ">Have a
                 question or just want to say
@@ -117,7 +210,7 @@
         <div class="md:max-w-xl md:mx-auto lg:max-w-2xl">
             <div class="card card-side bg-base-100 shadow-sm">
                 <figure class="flex-1">
-                    <img src="/git-tutorial/assets/white%20image-SF8Gn1r1.jpg" alt="Movie" />
+                    <img src="/git-tutorial/assets/white%20image-SF8Gn1r1.jpg" alt="Immagine team WhattaData" />
                 </figure>
                 <div class="card-body flex flex-col flex-1 p-4">
                     <p>
@@ -132,12 +225,9 @@
                 </div>
             </div>
         </div>
-
     </div>
 
-
-
-    <footer class="footer footer-horizontal footer-center bg-primary text-primary-content p-10">
+    <footer class="footer footer-horizontal footer-center bg-[#194964] text-primary-content p-10">
         <aside>
             <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                 clip-rule="evenodd" class="inline-block fill-current">

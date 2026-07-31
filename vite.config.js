@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: '/git-tutorial/', 
+  base: '/git-tutorial/',
   plugins: [
     tailwindcss(),
   ],
@@ -13,7 +13,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'about.html'),
-        download: resolve(__dirname, 'download.html'),
+        start: resolve(__dirname, 'start.html'),
+        resources: resolve(__dirname, 'resources.html'),
       },
     },
   },
