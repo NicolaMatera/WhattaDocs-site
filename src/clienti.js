@@ -6,6 +6,8 @@ const marqueeObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.2 }); 
 
-marqueeObserver.observe(document.querySelector('.marquee-viewer'));
+const marqueeElement = document.querySelector('.marquee-viewer');
 
-
+if (marqueeElement) {
+  marqueeObserver.observe(marqueeElement);
+}
