@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="./src/style.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Start WhattaDocs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -20,12 +20,17 @@
 
 <body>
 
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-base-200 focus:text-primary top-0 left-0">
+        Skip to main content
+    </a>
+
     <div class="drawer">
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col">
-            <div class="navbar bg-[#fafafa] w-full">
+            <header class="navbar bg-[#fafafa] w-full">
                 <div class="flex-none md:hidden">
-                    <label for="my-drawer-2" class="btn btn-square btn-ghost">
+                    <label for="my-drawer-2" tabindex="0" role="button" aria-label="Open menu"
+                        class="btn btn-square btn-ghost focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             class="inline-block h-6 w-6 stroke-current">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -36,424 +41,400 @@
 
                 <div class="mx-2 flex-1 px-2">
                     <a href="index.html"
-                        class="inline-flex items-center gap-2 btn btn-ghost normal-case text-xl hover:bg-transparent p-0"
+                        class="inline-flex items-center gap-2 btn btn-ghost normal-case text-xl hover:bg-transparent p-0 focus-visible:ring-2 focus-visible:ring-primary"
                         aria-label="WhattaDoc Home">
 
-                        <img src="./src/assets/image/axon.svg" alt="Logo WhattaDoc" class="w-8 h-8 object-contain" />
-                        <span class="text-lg">WhattaDoc</span>
+                        <img src="./src/assets/image/axon.svg" alt="WhattaDoc Logo" class="w-8 h-8 object-contain" />
+                        <span class="text-lg">WhattaDocs</span>
 
                     </a>
                 </div>
 
-                <div class="hidden flex-none md:block">
+                <nav class="hidden flex-none md:block" aria-label="Main navigation">
                     <ul class="menu menu-horizontal">
-                        <li><a class="text-base" href="start.html">Start</a></li>
-                        <li><a class="text-base" href="about.html">About</a></li>
-                        <li><a class="text-base" href="resources.html">Resources</a></li>
+                        <li><a class="text-base focus-visible:ring-2 focus-visible:ring-primary" href="start.html">Start</a></li>
+                        <li><a class="text-base focus-visible:ring-2 focus-visible:ring-primary" href="about.html">About</a></li>
+                        <li><a class="text-base focus-visible:ring-2 focus-visible:ring-primary" href="resources.html">Resources</a></li>
                     </ul>
-                </div>
-            </div>
+                </nav>
+            </header>
         </div>
         <div class="drawer-side">
             <label for="my-drawer-2" class="drawer-overlay"></label>
-            <div class="menu bg-base-200 text-base-content min-h-full w-full p-4">
+            <nav class="menu bg-base-200 text-base-content min-h-full w-full p-4" aria-label="Mobile navigation">
                 <div class="flex justify-end">
-                    <label for="my-drawer-2" class="btn btn-ghost btn-circle">✕</label>
+                    <label for="my-drawer-2" tabindex="0" role="button" aria-label="Close menu"
+                        class="btn btn-ghost btn-circle focus-visible:ring-2 focus-visible:ring-primary">✕</label>
                 </div>
                 <ul class="flex-1 flex flex-col justify-center space-y-4">
                     <li>
-                        <a href="start.html" class="justify-center font-plus-custom text-xl py-3">Start</a>
+                        <a href="start.html" class="justify-center font-plus-custom text-xl py-3 focus-visible:ring-2 focus-visible:ring-primary">Start</a>
                     </li>
                     <li>
-                        <a href="about.html" class="justify-center font-plus-custom text-xl py-3">About</a>
+                        <a href="about.html" class="justify-center font-plus-custom text-xl py-3 focus-visible:ring-2 focus-visible:ring-primary">About</a>
                     </li>
                     <li>
-                        <a href="resources.html" class="justify-center font-plus-custom text-xl py-3">Resources</a>
+                        <a href="resources.html" class="justify-center font-plus-custom text-xl py-3 focus-visible:ring-2 focus-visible:ring-primary">Resources</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main id="main-content" tabindex="-1">
+        <section class="hero bg-gradient-to-b to-transparent from-[#EBE3D7]/70">
+            <div class="hero-content text-center py-12 px-8 sm:px-16">
+                <div class="md:max-w-lg lg:max-w-xl">
+                    <div class="flex justify-center w-full mt-8">
+                        <span
+                            class="text-[#754306] font-inter-custom text-base items-center justify-center rounded-lg bg-[#FDFBF7] px-4 py-1.5">
+                            Now
+                        </span>
+                    </div>
+                    <h1 class="font-plus-custom text-4xl text-pretty font-bold mt-4 lg:text-5xl">Ready when you are</h1>
+                    <p class="font-urbanist-custom text-lg my-8 ">
+                        Experience the full power of our AI workspace directly in your browser. No downloads, no
+                        installations, and no hardware limits. Just sign in to access your documents and personalized models
+                        from any device, anywhere in the world.
+                    </p>
+                    <a href="WhattaDoc.com" class="btn btn-primary btn-lg focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Start now</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="mt-12 stats shadow w-full stats-vertical lg:stats-horizontal">
+            <div class="stat text-center ">
+                <div class="stat-title">Documents analyzed</div>
+                <div class="stat-value text-primary sm:text-3xl">25.6K</div>
+                <div class="stat-desc">21% more than last month</div>
+            </div>
+
+            <div class="stat text-center">
+                <div class="stat-title ">Users</div>
+                <div class="stat-value text-secondary sm:text-3xl">2.6M</div>
+                <div class="stat-desc">21% more than last month</div>
+            </div>
+
+            <div class="stat text-center">
+                <div class="stat-value sm:text-3xl">86%</div>
+                <div class="stat-title">Accuracy of answers</div>
+                <div class="stat-desc text-secondary">31 tasks remaining</div>
+            </div>
+        </div>
+
+        <section class="mt-16 text-center">
+            <div class="px-16 sm:px-24 md:px-0 md:max-w-md md:mx-auto lg:max-w-xl">
+                <div class="flex justify-center w-full">
+                    <span
+                        class="text-sm text-[#754306] font-inter-custom xl:text-base items-center justify-center rounded-lg bg-[#FDFBF7] px-4 py-1.5">
+                        Feature suite
+                    </span>
+                </div>
+                <h2 class="font-plus-custom font-thin text-balance text-2xl mt-4">Powerful Capabilities
+                </h2>
+                <p class="font-urbanist-custom text-base my-6 text-pretty ">Master your documents
+                    like never before. From seamless team collaboration to tailored AI training, discover three adaptive
+                    modes built to optimize your productivity and extract maximum value from your data
+                </p>
+            </div>
+
+            <div class="mt-20">
+                <ul class="no-scrollbar flex flex-row mt-8 justify-center">
+                    <li>
+                        <button type="button" id="f1" class="text-base font-plus-custom focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded px-2">Feature1</button>
+                    </li>
+                    <li class="ml-16">
+                        <button type="button" id="f2" class="text-base font-plus-custom focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded px-2">Feature2</button>
+                    </li>
+                    <li class="ml-16">
+                        <button type="button" id="f3" class="text-base font-plus-custom focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded px-2">Feature3</button>
+                    </li>
+                    <li class="ml-16">
+                        <button type="button" id="f4" class="text-base font-plus-custom focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded px-2">Feature4</button>
                     </li>
                 </ul>
             </div>
-        </div>
-    </div>
 
-    <section class="hero bg-gradient-to-b to-transparent from-[#EBE3D7]/70">
-        <div class="hero-content text-center py-12 px-8 sm:px-16">
-            <div class="md:max-w-lg lg:max-w-xl">
-                <div class="flex justify-center w-full mt-8">
-                    <span
-                        class="text-[#754306] font-inter-custom text-base items-center justify-center rounded-lg bg-[#FDFBF7] px-4 py-1.5">
-                        Now
-                    </span>
+            <div class="mt-8 px-4 mockup-browser border-base-300 border max-w-[90%] md:max-w-lg mx-auto lg:max-w-2xl">
+                <div class="mockup-browser-toolbar">
+                    <div class="input">https://whattadocs.com</div>
                 </div>
-                <h1 class="font-plus-custom text-4xl text-pretty font-bold mt-4 lg:text-5xl">Ready when you are</h1>
-                <p class="font-urbanist-custom text-lg my-8 ">
-                    Experience the full power of our AI workspace directly in your browser. No downloads, no
-                    installations, and no hardware limits. Just sign in to access your documents and personalized models
-                    from any device, anywhere in the world.
-                </p>
-                <a href="WhattaDoc.com" class="btn btn-primary btn-lg">Start now</a>
+                <div class="grid place-content-center border-t border-base-300 h-auto">
+                    <img id="img1" src="./src/assets/image/white image.webp" alt="Features image: precisely upload, filter and process files">
+                    <img id="img2" class="hidden" src="./src/assets/image/white image.webp" alt="Features image: team creation">
+                    <img id="img3" class="hidden" src="./src/assets/image/white image.webp" alt="Features image: AI model creation">
+                    <img id="img4" class="hidden" src="./src/assets/image/white image.webp" alt="Feature 4 image: monitoring statistics on teams and used resources">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="mt-12 stats shadow w-full stats-vertical lg:stats-horizontal">
-        <div class="stat text-center ">
-            <div class="stat-title">Documents analyzed</div>
-            <div class="stat-value text-primary sm:text-3xl">25.6K</div>
-            <div class="stat-desc">21% more than last month</div>
-        </div>
-
-        <div class="stat text-center">
-            <div class="stat-title ">Users</div>
-            <div class="stat-value text-secondary sm:text-3xl">2.6M</div>
-            <div class="stat-desc">21% more than last month</div>
-        </div>
-
-        <div class="stat text-center">
-            <div class="stat-value sm:text-3xl">86%</div>
-            <div class="stat-title">Accuracy of answers</div>
-            <div class="stat-desc text-secondary">31 tasks remaining</div>
-        </div>
-    </div>
-
-    <section class="mt-16 text-center">
-        <div class="px-16 sm:px-24 md:px-0 md:max-w-md md:mx-auto lg:max-w-xl">
+        <div class="mt-16 px-4 md:max-w-lg md:mx-auto md:px-0">
             <div class="flex justify-center w-full">
                 <span
-                    class="text-sm text-[#754306] font-inter-custom xl:text-base items-center justify-center rounded-lg bg-[#FDFBF7] px-4 py-1.5">
-                    Feature suite
+                    class="text-base text-[#D97706]/80 font-inter-custom items-center justify-center rounded-lg bg-[#FDFBF7] px-4 py-1.5">
+                    Rating
                 </span>
             </div>
-            <h2 class="font-plus-custom font-thin text-balance text-2xl mt-4">Powerful Capabilities
+            <h2 class="font-plus-custom font-bold text-center text-balance text-3xl mt-4">Voice of users
             </h2>
-            <p class="font-urbanist-custom text-base my-6 text-pretty ">Master your documents
-                like never before. From seamless team collaboration to tailored AI training, discover three adaptive
-                modes built to optimize your productivity and extract maximum value from your data
+            <p class="font-urbanist-custom py-8 px-12 sm:px-20 md:px-12 lg:px-8 text-center ">See how teams and individuals
+                are transforming their workflow.
+                Real feedback from users who have made their documents truly intelligent.
             </p>
         </div>
 
-        <div class="mt-20">
-            <ul class="no-scrollbar flex flex-row mt-8 justify-center">
-                <li id="f1" class="text-base font-plus-custom">Feature1</li>
-                <li id="f2" class="ml-16 text-base font-plus-custom">Feature2</li>
-                <li id="f3" class="ml-16 text-base font-plus-custom">Feature3</li>
-                <li id="f4" class="ml-16 text-base font-plus-custom">Feature4</li>
-            </ul>
-        </div>
+        <div
+            class="marquee-viewer h-[40vh] max-h-[400px] mb-16 overflow-y-hidden bg-base-100 mt-8 mx-auto w-[80%] sm:w-[70%] md:w-[60%] lg:w-[70%] lg:mb-24">
 
-        <div class="mt-8 px-4 mockup-browser border-base-300 border max-w-[90%] md:max-w-lg mx-auto lg:max-w-2xl">
-            <div class="mockup-browser-toolbar">
-                <div class="input">https://daisyui.com</div>
-            </div>
-            <div class="grid place-content-center border-t border-base-300 h-auto">
-                <img id="img1" src="./src/assets/image/hero-image.webp" alt="immagine feature1">
-                <img id="img2" class="hidden" src="./src/assets/image/hero-image.webp" alt="immagine feature2">
-                <img id="img3" class="hidden" src="./src/assets/image/hero-image.webp" alt="immagine feature3">
-                <img id="img4" class="hidden" src="./src/assets/image/hero-image.webp" alt="immagine feature4">
-            </div>
-        </div>
-    </section>
+            <div class="flex flex-col lg:flex-row">
 
-    <div class="mt-16 px-4 md:max-w-lg md:mx-auto md:px-0">
-        <div class="flex justify-center w-full">
-            <span
-                class="text-base text-[#D97706]/80 font-inter-custom items-center justify-center rounded-lg bg-[#FDFBF7] px-4 py-1.5">
-                Rating
-            </span>
-        </div>
-        <h2 class="font-plus-custom font-bold text-center text-balance text-3xl mt-4">Voice of users
-        </h2>
-        <p class="font-urbanist-custom py-8 px-12 sm:px-20 md:px-12 lg:px-8 text-center ">See how teams and individuals
-            are transforming their workflow.
-            Real feedback from users who have made their documents truly intelligent.
-        </p>
-    </div>
-
-    <div
-        class="marquee-viewer h-[40vh] max-h-[400px] mb-16 overflow-y-hidden bg-base-100 mt-8 mx-auto w-[80%] sm:w-[70%] md:w-[60%] lg:w-[70%] lg:mb-24">
-
-        <div class="flex flex-col lg:flex-row">
-
-            <div class="animate-marquee flex flex-col h-max px-4">
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body ">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="flex gap-1 mt-4" role="img" aria-label="Valutazione: 5 stelle su 5">
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                <div class="animate-marquee flex flex-col h-max px-4">
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body ">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="flex gap-1 mt-4" role="img" aria-label="Rating: 5 out of 5 stars">
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Mario Rossi</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Mario Rossi</h3>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="flex gap-1 mt-4" role="img" aria-label="Valutazione: 4 stelle su 5">
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="flex gap-1 mt-4" role="img" aria-label="Rating: 4 out of 5 stars">
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Nicola Matera</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Nicola Matera</h3>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="flex gap-1 mt-4" role="img" aria-label="Valutazione: 4 stelle su 5">
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="flex gap-1 mt-4" role="img" aria-label="Rating: 4 out of 5 stars">
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Francesco Bianchi</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Francesco Bianchi</h3>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="flex gap-1 mt-4" role="img" aria-label="Valutazione: 4 stelle su 5">
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="flex gap-1 mt-4" role="img" aria-label="Rating: 4 out of 5 stars">
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Mario Rossi</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Mario Rossi</h3>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="rating rating-sm mt-4">
-                           <div class="flex gap-1 mt-4" role="img" aria-label="Valutazione: 5 stelle su 5">
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
-                            <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="rating rating-sm mt-4">
+                               <div class="flex gap-1 mt-4" role="img" aria-label="Rating: 5 out of 5 stars">
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                                <div class="w-5 h-5 mask mask-star-2 bg-amber-500"></div>
+                            </div>
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Nicola Matera</h3>
                         </div>
-                        </div>
-                        <h3 class="font-urbanist-custom font-medium">Nicola Matera</h3>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="rating rating-sm mt-4">
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="1 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="2 star" checked="checked" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="3 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="4 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="5 star" />
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="rating rating-sm mt-4">
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" disabled aria-label="1 star" />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" disabled aria-label="2 star" checked="checked" />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" disabled aria-label="3 star" />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" disabled aria-label="4 star" />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" disabled aria-label="5 star" />
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Francesco Bianchi</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Francesco Bianchi</h3>
-                    </div>
-                </article>
-            </div>
+                    </article>
+                </div>
 
-            <div class="hidden lg:flex animate-marquee flex-col h-max px-4 mt-16">
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="rating rating-sm mt-4">
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="1 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="2 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="3 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="4 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="5 star" />
+                <div class="hidden lg:flex animate-marquee flex-col h-max px-4 mt-16">
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="rating rating-sm mt-4">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" disabled aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" disabled aria-label="2 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" disabled aria-label="3 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" disabled aria-label="4 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" disabled aria-label="5 star" checked="checked" />
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Mario Rossi</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Mario Rossi</h3>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="rating rating-sm mt-4">
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="1 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="2 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="3 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="4 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="5 star" checked="checked" />
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="rating rating-sm mt-4">
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" disabled aria-label="1 star" />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" disabled aria-label="2 star" />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" disabled aria-label="3 star" />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" disabled aria-label="4 star" />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" disabled aria-label="5 star" checked="checked" />
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Nicola Matera</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Nicola Matera</h3>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="rating rating-sm mt-4">
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="1 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="2 star" checked="checked" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="3 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="4 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="5 star" />
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="rating rating-sm mt-4">
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" disabled aria-label="1 star" />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" disabled aria-label="2 star" checked="checked" />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" disabled aria-label="3 star" />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" disabled aria-label="4 star" />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" disabled aria-label="5 star" />
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Francesco Bianchi</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Francesco Bianchi</h3>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="rating rating-sm mt-4">
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="1 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="2 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="3 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="4 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="5 star" />
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="rating rating-sm mt-4">
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" disabled aria-label="1 star" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" disabled aria-label="2 star" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" disabled aria-label="3 star" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" disabled aria-label="4 star" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" disabled aria-label="5 star" checked="checked" />
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Mario Rossi</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Mario Rossi</h3>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="rating rating-sm mt-4">
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="1 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="2 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="3 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="4 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="5 star" checked="checked" />
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="rating rating-sm mt-4">
+                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" disabled aria-label="1 star" />
+                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" disabled aria-label="2 star" />
+                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" disabled aria-label="3 star" />
+                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" disabled aria-label="4 star" />
+                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" disabled aria-label="5 star" checked="checked" />
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Nicola Matera</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Nicola Matera</h3>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card card-border bg-base-100 mt-8">
-                    <div class="card-body">
-                        <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Cras
-                            vel
-                            odio sed ligula sollicitudin
-                            aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
-                            semper,
-                            dapibus enim vitae, pellentesque dolor.</p>
-                        <div class="rating rating-sm mt-4">
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="1 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="2 star" checked="checked" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="3 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="4 star" />
-                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
-                                aria-label="5 star" />
+                    <article class="card card-border bg-base-100 mt-8">
+                        <div class="card-body">
+                            <p class="font-urbanist-custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Cras
+                                vel
+                                odio sed ligula sollicitudin
+                                aliquet. Duis libero est, lacinia et dui at, sodales ultrices ligula. Curabitur eu massa
+                                semper,
+                                dapibus enim vitae, pellentesque dolor.</p>
+                            <div class="rating rating-sm mt-4">
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" disabled aria-label="1 star" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" disabled aria-label="2 star" checked="checked" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" disabled aria-label="3 star" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" disabled aria-label="4 star" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" disabled aria-label="5 star" />
+                            </div>
+                            <h3 class="font-urbanist-custom font-medium">Francesco Bianchi</h3>
                         </div>
-                        <h3 class="font-urbanist-custom font-medium">Francesco Bianchi</h3>
-                    </div>
-                </article>
+                    </article>
+                </div>
+
             </div>
 
         </div>
-
-    </div>
+    </main>
 
     <footer class="mt-16 footer footer-horizontal footer-center bg-[#194964]  text-primary-content p-10">
         <aside>
@@ -468,11 +449,12 @@
                 <br />
                 Providing reliable tech since 1992
             </p>
-            <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+            <p>Copyright © 2026 - All right reserved</p>
         </aside>
         <nav>
             <div class="grid grid-flow-col gap-4">
-                <a>
+                <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter"
+                    class="btn btn-ghost btn-circle btn-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         class="fill-current">
                         <path
@@ -480,7 +462,8 @@
                         </path>
                     </svg>
                 </a>
-                <a>
+                <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube"
+                    class="btn btn-ghost btn-circle btn-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         class="fill-current">
                         <path
@@ -488,7 +471,8 @@
                         </path>
                     </svg>
                 </a>
-                <a>
+                <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"
+                    class="btn btn-ghost btn-circle btn-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         class="fill-current">
                         <path
@@ -499,7 +483,6 @@
             </div>
         </nav>
     </footer>
-
 
     <script type="module" src="./src/feature.js"></script>
     <script type="module" src="./src/clienti.js"></script>

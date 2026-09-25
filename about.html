@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/style.css" rel="stylesheet">
-    <title>Document</title>
+    <title>About WhattaDocs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -19,12 +19,17 @@
 
 <body>
 
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-base-200 focus:text-primary top-0 left-0">
+        Skip to main content
+    </a>
+
     <div class="drawer">
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col">
-            <div class="navbar bg-[#fafafa] w-full">
+            <header class="navbar bg-[#fafafa] w-full">
                 <div class="flex-none md:hidden">
-                    <label for="my-drawer-2" class="btn btn-square btn-ghost">
+                    <label for="my-drawer-2" tabindex="0" role="button" aria-label="Open menu"
+                        class="btn btn-square btn-ghost focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             class="inline-block h-6 w-6 stroke-current">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -35,197 +40,205 @@
 
                 <div class="mx-2 flex-1 px-2">
                     <a href="index.html"
-                        class="inline-flex items-center gap-2 btn btn-ghost normal-case text-xl hover:bg-transparent p-0"
+                        class="inline-flex items-center gap-2 btn btn-ghost normal-case text-xl hover:bg-transparent p-0 focus-visible:ring-2 focus-visible:ring-primary"
                         aria-label="WhattaDoc Home">
 
-                        <img src="./src/assets/image/axon.svg" alt="Logo WhattaDoc" class="w-8 h-8 object-contain" />
-                        <span class="text-lg">WhattaDoc</span>
+                        <img src="./src/assets/image/axon.svg" alt="WhattaDoc Logo" class="w-8 h-8 object-contain" />
+                        <span class="text-lg">WhattaDocs</span>
 
                     </a>
                 </div>
 
-                <div class="hidden flex-none md:block">
+                <nav class="hidden flex-none md:block" aria-label="Main navigation">
                     <ul class="menu menu-horizontal">
-                        <li><a class="text-base" href="start.html">Start</a></li>
-                        <li><a class="text-base" href="about.html">About</a></li>
-                        <li><a class="text-base" href="resources.html">Resources</a></li>
+                        <li><a class="text-base focus-visible:ring-2 focus-visible:ring-primary" href="start.html">Start</a></li>
+                        <li><a class="text-base focus-visible:ring-2 focus-visible:ring-primary" href="about.html">About</a></li>
+                        <li><a class="text-base focus-visible:ring-2 focus-visible:ring-primary" href="resources.html">Resources</a></li>
                     </ul>
-                </div>
-            </div>
+                </nav>
+            </header>
         </div>
         <div class="drawer-side">
             <label for="my-drawer-2" class="drawer-overlay"></label>
-            <div class="menu bg-base-200 text-base-content min-h-full w-full p-4">
+            <nav class="menu bg-base-200 text-base-content min-h-full w-full p-4" aria-label="Mobile navigation">
                 <div class="flex justify-end">
-                    <label for="my-drawer-2" class="btn btn-ghost btn-circle">✕</label>
+                    <label for="my-drawer-2" tabindex="0" role="button" aria-label="Close menu"
+                        class="btn btn-ghost btn-circle focus-visible:ring-2 focus-visible:ring-primary">✕</label>
                 </div>
                 <ul class="flex-1 flex flex-col justify-center space-y-4">
                     <li>
-                        <a href="start.html" class="justify-center font-plus-custom text-xl py-3">Start</a>
+                        <a href="start.html" class="justify-center font-plus-custom text-xl py-3 focus-visible:ring-2 focus-visible:ring-primary">Start</a>
                     </li>
                     <li>
-                        <a href="about.html" class="justify-center font-plus-custom text-xl py-3">About</a>
+                        <a href="about.html" class="justify-center font-plus-custom text-xl py-3 focus-visible:ring-2 focus-visible:ring-primary">About</a>
                     </li>
                     <li>
-                        <a href="resources.html" class="justify-center font-plus-custom text-xl py-3">Resources</a>
+                        <a href="resources.html" class="justify-center font-plus-custom text-xl py-3 focus-visible:ring-2 focus-visible:ring-primary">Resources</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </div>
 
-    <div class="mt-12 px-12 sm:px-20 md:px-0 md:max-w-lg md:mx-auto lg:max-w-2xl">
-        <img class="mx-auto w-[15%]" src="./src/assets/logo.png" alt="Logo WhattaData">
+    <main id="main-content" tabindex="-1">
+        <div class="mt-12 px-12 sm:px-20 md:px-0 md:max-w-lg md:mx-auto lg:max-w-2xl">
+            <img class="mx-auto w-[15%]" src="./src/assets/logo.png" alt="WhattaData Logo">
 
-        <div class="flex justify-center w-full mt-16">
-            <span
-                class="text-base text-[#754306] font-inter-custom items-center justify-center rounded-lg bg-[#FDFBF7] px-4 py-1.5">
-                Our mission
-            </span>
+            <div class="flex justify-center w-full mt-16">
+                <span
+                    class="text-base text-[#754306] font-inter-custom items-center justify-center rounded-lg bg-[#FDFBF7] px-4 py-1.5">
+                    Our mission
+                </span>
+            </div>
+
+            <h1 class="font-inter-custom font-thin text-center text-balance text-4xl mt-4 lg:text-5xl">
+                From Data to Decision
+            </h1>
+
+            <p class="text-[#3d3d3d] font-urbanist-custom py-8 text-center text-lg md:text-balance">
+                Whattadata is a spin-off of the University of Milan-Bicocca that transforms data management and analysis
+                into concrete solutions for decision-making, processes, and services</p>
         </div>
 
-        <h1 class="font-inter-custom font-thin text-center text-balance text-4xl mt-4 lg:text-5xl">
-            From Data to Decision
-        </h1>
+        <div class="mt-12 px-8 sm:px-16 flex flex-col md:max-w-xl md:mx-auto md:p-0 lg:max-w-3xl">
+            <h2 class="font-plus-custom font-bold text-balance text-3xl mt-4 lg:max-w-sm">Our Team
+            </h2>
+            <div class="grid grid-cols-2 gap-2 mt-8 md:w-full lg:max-w-lg">
+                <div>
+                    <img class="rounded-md object-cover" src="./src/assets/image/team-image.webp"
+                        alt="WhattaData team photo">
+                    <img class="mt-2 rounded-md object-cover" src="./src/assets/image/team-image.webp"
+                        alt="WhattaData team photo">
+                </div>
+                <img class="h-full rounded-md object-cover" src="./src/assets/image/team-image.webp"
+                    alt="WhattaData team photo">
+            </div>
+            <p class="font-urbanist-custom mt-8 pr-4 md:pr-0"> Whattadata was founded by the University of Milan-Bicocca to
+                bring innovation to data management and analysis. We develop practical solutions that optimize
+                decision-making processes and strategic services.
+            </p>
 
-        <p class="text-[#3d3d3d] font-urbanist-custom py-8 text-center text-lg md:text-balance">
-            Whattadata is a spin-off of the University of Milan-Bicocca that transforms data management and analysis
-            into concrete solutions for decision-making, processes, and services</p>
-    </div>
-
-    <div class="mt-12 px-8 sm:px-16 flex flex-col md:max-w-xl md:mx-auto md:p-0 lg:max-w-3xl">
-        <h2 class="font-plus-custom font-bold text-balance text-3xl mt-4 lg:max-w-sm">Our Team
-        </h2>
-        <div class="grid grid-cols-2 gap-2 mt-8 md:w-full lg:max-w-lg">
-            <div>
-                <img class="rounded-md object-cover" src="./src/assets/image/team-image.jpg"
-                    alt="Foto del team WhattaData">
-                <img class="mt-2 rounded-md object-cover" src="./src/assets/image/team-image.jpg"
-                    alt="Foto del team WhattaData">
-            </div>
-            <img class="h-full rounded-md object-cover" src="./src/assets/image/team-image.jpg"
-                alt="Foto del team WhattaData">
-        </div>
-        <p class="font-urbanist-custom mt-8 pr-4 md:pr-0"> Whattadata was founded by the University of Milan-Bicocca to
-            bring innovation to data management and analysis. We develop practical solutions that optimize
-            decision-making processes and strategic services.
-        </p>
-
-        <p class="font-urbanist-custom mt-8 pr-4 md:pr-0">Whattadata bridges the gap between science and business.
-            We leverage a company's information assets by developing customized solutions to simplify the management of
-            day-to-day processes.
-        </p>
-    </div>
-
-    <div
-        class="relative px-8 sm:px-16 aspect-[5/3] sm:aspect-[4/2] md:px-0 md:aspect-[6/4] md:max-w-xl lg:aspect-[5/3] flex justify-center mt-20 lg:max-w-xl md:mx-auto">
-
-        <div id="team-carousel" class="carousel rounded-box w-full scroll-smooth">
-            <div class="carousel-item w-1/2">
-                <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-                    class="w-full object-cover" alt="Primo membro team WhattaData" />
-            </div>
-            <div class="carousel-item w-1/2">
-                <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-                    class="w-full object-cover" alt="Secondo membro team WhattaData" />
-            </div>
-            <div class="carousel-item w-1/2">
-                <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-                    class="w-full object-cover" alt="Terzo membro team WhattaData" />
-            </div>
-            <div class="carousel-item w-1/2">
-                <img src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-                    class="w-full object-cover" alt="Quarto membro team WhattaData" />
-            </div>
-            <div class="carousel-item w-1/2">
-                <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-                    class="w-full object-cover" alt="Quinto membro team WhattaData" />
-            </div>
-            <div class="carousel-item w-1/2">
-                <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-                    class="w-full object-cover" alt="Sesto membro team WhattaData" />
-            </div>
-            <div class="carousel-item w-1/2">
-                <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-                    class="w-full object-cover" alt="Settimo membro team WhattaData" />
-            </div>
+            <p class="font-urbanist-custom mt-8 pr-4 md:pr-0">Whattadata bridges the gap between science and business.
+                We leverage a company's information assets by developing customized solutions to simplify the management of
+                day-to-day processes.
+            </p>
         </div>
 
         <div
-            class="absolute -left-5 -right-5 top-1/2 -translate-y-1/2 justify-between hidden lg:flex pointer-events-none z-10">
-            <button
-                onclick="document.getElementById('team-carousel').scrollBy({ left: -document.getElementById('team-carousel').clientWidth, behavior: 'smooth' })"
-                class="btn btn-circle btn-sm opacity-80 hover:opacity-100 pointer-events-auto">❮</button>
-            <button
-                onclick="document.getElementById('team-carousel').scrollBy({ left: document.getElementById('team-carousel').clientWidth, behavior: 'smooth' })"
-                class="btn btn-circle btn-sm opacity-80 hover:opacity-100 pointer-events-auto">❯</button>
-        </div>
-    </div>
+            class="relative px-8 sm:px-16 aspect-[5/3] sm:aspect-[4/2] md:px-0 md:aspect-[6/4] md:max-w-xl lg:aspect-[5/3] flex justify-center mt-20 lg:max-w-xl md:mx-auto">
 
-    <div class="flex flex-col mx-auto mt-12 max-w-md md:max-w-lg md:p-0 lg:max-w-3xl">
-        <h2 class="font-plus-custom font-bold text-balance text-3xl mt-4 lg:max-w-sm">Our Product
-        </h2>
-        <div class="flex flex-col lg:flex-row lg:gap-8">
-            <div class="mt-8 card w-full">
-                <figure>
-                    <img src="./src/assets/image/immagine-prodotti.webp" alt="Immagine computer aperto su Arianne" />
-                </figure>
-                <div class="card-body bg-[#EBE3D7]/30">
-                    <h3 class="card-title">Arianne</h3>
-                    <p class="font-urbanist-custom text-base">Digital platform for psychologists, psychotherapists, and psychiatrists</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Go now</button>
-                    </div>
+            <div id="team-carousel" tabindex="0" aria-label="Team photo gallery"
+                class="carousel rounded-box w-full scroll-smooth focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
+                <div class="carousel-item w-1/2">
+                    <img src="src/assets/image/prima.webp"
+                        class="w-full object-cover" alt="Image of the first WhattaData team member" />
+                </div>
+                <div class="carousel-item w-1/2">
+                    <img src="src/assets/image/seconda.webp"
+                        class="w-full object-cover" alt="Image of the second WhattaData team member" />
+                </div>
+                <div class="carousel-item w-1/2">
+                    <img src="src/assets/image/prima.webp"
+                        class="w-full object-cover" alt="Image of the third WhattaData team member" />
+                </div>
+                <div class="carousel-item w-1/2">
+                    <img src="src/assets/image/seconda.webp"
+                        class="w-full object-cover" alt="Image of the fourth WhattaData team member" />
+                </div>
+                <div class="carousel-item w-1/2">
+                    <img src="src/assets/image/prima.webp"
+                        class="w-full object-cover" alt="Image of the fifth WhattaData team member" />
+                </div>
+                <div class="carousel-item w-1/2">
+                    <img src="src/assets/image/seconda.webp"
+                        class="w-full object-cover" alt="Image of the sixth WhattaData team member" />
+                </div>
+                <div class="carousel-item w-1/2">
+                    <img src="src/assets/image/prima.webp"
+                        class="w-full object-cover" alt="Image of the seventh WhattaData team member" />
                 </div>
             </div>
 
-            <div class="mt-12 card w-full">
-                <figure>
-                    <img src="./src/assets/image/immagine-prodotti.webp" alt="Immagine computer aperto su WhattaDoc" />
-                </figure>
-                <div class="card-body bg-[#EBE3D7]/30">
-                    <h3 class="card-title">WhattaDoc</h3>
-                    <p class="font-urbanist-custom text-base">Conversational agent for querying corporate documents and private sources</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Go now</button>
-                    </div>
-                </div>
+            <div
+                class="absolute -left-5 -right-5 top-1/2 -translate-y-1/2 justify-between hidden lg:flex pointer-events-none z-10">
+                <button
+                    type="button"
+                    aria-label="Previous team photo"
+                    onclick="document.getElementById('team-carousel').scrollBy({ left: -document.getElementById('team-carousel').clientWidth, behavior: 'smooth' })"
+                    class="btn btn-circle btn-sm opacity-80 hover:opacity-100 pointer-events-auto focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">❮</button>
+                <button
+                    type="button"
+                    aria-label="Next team photo"
+                    onclick="document.getElementById('team-carousel').scrollBy({ left: document.getElementById('team-carousel').clientWidth, behavior: 'smooth' })"
+                    class="btn btn-circle btn-sm opacity-80 hover:opacity-100 pointer-events-auto focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">❯</button>
             </div>
         </div>
-    </div>
 
-    <div class="bg-gradient-to-b to-transparent from-[#EBE3D7]/30 relative mt-20 pt-12 py-20 px-4 md:px-0">
-
-        <div class=" md:max-w-lg md:mx-auto ">
-            <h2 class="font-inter-custom font-thin text-center text-balance text-3xl">Get in touch
+        <div class="flex flex-col mx-auto mt-12 max-w-md md:max-w-lg md:p-0 lg:max-w-3xl">
+            <h2 class="font-plus-custom font-bold text-balance text-3xl mt-4 lg:max-w-sm">Our Product
             </h2>
-            <p class="font-urbanist-custom py-8 px-16 sm:px-20 md:px-12 text-sm text-center text-pretty ">Have a
-                question or just want to say
-                hi? We're here to help you get the most out of your documents. Reach out to our team, and we’ll get back
-                to you as soon as possible
-            </p>
+            <div class="flex flex-col lg:flex-row lg:gap-8">
+                <div class="mt-8 card w-full">
+                    <figure>
+                        <img src="./src/assets/image/immagine-prodotti.webp" alt="Image of a computer open to Arianne" />
+                    </figure>
+                    <div class="card-body bg-[#EBE3D7]/30">
+                        <h3 class="card-title">Arianne</h3>
+                        <p class="font-urbanist-custom text-base">Digital platform for psychologists, psychotherapists, and psychiatrists</p>
+                        <div class="card-actions justify-end">
+                            <button type="button" aria-label="Go to the Arianne platform" class="btn btn-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Go now</button>
+                        </div>
+                    </div>
+                </div>
 
-        </div>
-
-        <div class="md:max-w-xl md:mx-auto lg:max-w-2xl">
-            <div class="card card-side bg-base-100 shadow-sm">
-                <figure class="flex-1">
-                    <img src="./src/assets/image/white image.jpg" alt="Immagine team WhattaData" />
-                </figure>
-                <div class="card-body flex flex-col flex-1 p-4">
-                    <p>
-                        Email:
-                        <span class="block text-sm opacity-70">email@gmail.com</span>
-                    </p>
-
-                    <p class="mt-4 lg:mt-0">
-                        Office:
-                        <span class="block text-sm opacity-70">Milano, Viale Sarca</span>
-                    </p>
+                <div class="mt-12 lg:mt-8 card w-full ">
+                    <figure>
+                        <img src="./src/assets/image/immagine-prodotti.webp" alt="Image of a computer open to WhattaDoc" />
+                    </figure>
+                    <div class="card-body bg-[#EBE3D7]/30">
+                        <h3 class="card-title">WhattaDoc</h3>
+                        <p class="font-urbanist-custom text-base">Conversational agent for querying corporate documents and private sources</p>
+                        <div class="card-actions justify-end">
+                            <button type="button" aria-label="Go to the WhattaDoc platform" class="btn btn-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Go now</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="bg-gradient-to-b to-transparent from-[#EBE3D7]/30 relative mt-20 pt-12 py-20 px-4 md:px-0">
+
+            <div class=" md:max-w-lg md:mx-auto ">
+                <h2 class="font-inter-custom font-thin text-center text-balance text-3xl">Get in touch
+                </h2>
+                <p class="font-urbanist-custom py-8 px-16 sm:px-20 md:px-12 text-sm text-center text-pretty ">Have a
+                    question or just want to say
+                    hi? We're here to help you get the most out of your documents. Reach out to our team, and we’ll get back
+                    to you as soon as possible
+                </p>
+
+            </div>
+
+            <div class="md:max-w-xl md:mx-auto lg:max-w-2xl">
+                <div class="card card-side bg-base-100 shadow-sm">
+                    <figure class="flex-1">
+                        <img src="./src/assets/image/white image.webp" alt="WhattaData team image" />
+                    </figure>
+                    <div class="card-body flex flex-col flex-1 p-4">
+                        <p>
+                            Email:
+                            <a href="mailto:email@gmail.com" class="block text-sm opacity-70 underline hover:opacity-100 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded">email@gmail.com</a>
+                        </p>
+
+                        <p class="mt-4 lg:mt-0">
+                            Office:
+                            <span class="block text-sm opacity-70">Milano, Viale Sarca</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer class="footer footer-horizontal footer-center bg-[#194964] text-primary-content p-10">
         <aside>
@@ -240,11 +253,12 @@
                 <br />
                 Providing reliable tech since 1992
             </p>
-            <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+            <p>Copyright © 2026 - All right reserved</p>
         </aside>
         <nav>
             <div class="grid grid-flow-col gap-4">
-                <a>
+                <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter"
+                    class="btn btn-ghost btn-circle btn-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         class="fill-current">
                         <path
@@ -252,7 +266,8 @@
                         </path>
                     </svg>
                 </a>
-                <a>
+                <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube"
+                    class="btn btn-ghost btn-circle btn-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         class="fill-current">
                         <path
@@ -260,7 +275,8 @@
                         </path>
                     </svg>
                 </a>
-                <a>
+                <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"
+                    class="btn btn-ghost btn-circle btn-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         class="fill-current">
                         <path
